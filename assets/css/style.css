@@ -56,10 +56,20 @@
   --color-pink-500: oklch(65.6% 0.241 354.308);
   --color-rose-500: oklch(64.5% 0.246 16.439);
   --color-gray-100: oklch(96.7% 0.003 264.542);
+  --bg: #07070a;
+  --left: #7b84ff;
+  --right: #ff5fd0;
 
   --bg-color: white;
   --text-color: black;
   --bg-nav: rgba(255, 255, 255, 0.6);
+  --border-color: rgba(183, 183, 183, 0.637);
+}
+.dark {
+  --bg-color: black;
+  --text-color: white;
+  --bg-nav: rgba(0, 0, 0, 0.6);
+  --border-color: rgba(74, 74, 74, 0.514);
 }
 
 body {
@@ -72,11 +82,6 @@ body {
     sans-serif;
   height: 200vh;
   background-color: var(--bg-color);
-}
-.dark {
-  --bg-color: black;
-  --text-color: white;
-  --bg-nav: rgba(0, 0, 0, 0.6);
 }
 
 .d-flex {
@@ -96,12 +101,11 @@ header {
 }
 nav {
   background-color: var(--bg-color);
-  /* border: 1px solid rgb(226, 226, 226); */
   padding: 17px;
   background: var(--bg-nav);
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
-  transition: all 0.3s;
+  transition: all 0.1s;
 }
 .fix {
   position: fixed;
@@ -110,6 +114,7 @@ nav {
   right: 0;
   top: 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.167);
+  border-bottom: 1px solid var(--border-color);
 }
 nav h2 {
   font-weight: 500;
@@ -117,7 +122,7 @@ nav h2 {
   cursor: pointer;
 }
 nav span {
-  color: var(--text-color);
+  color: white;
   background-color: var(--color-purple-600);
   padding: 4px 7px;
   font-weight: bold;
@@ -155,8 +160,65 @@ ul li {
   padding: 5px;
   border-radius: 7px;
   transition: all 0.2s;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 .nav button:hover {
   transform: scale(103%);
-  background-color: aliceblue;
+}
+
+/* Main */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  text-align: center;
+}
+.home_subtitle {
+  background-color: color-mix(in oklab, var(--primary) 10%, transparent);
+  padding: 14px 20px;
+  border-radius: 25px;
+  border: 1px solid;
+  border-color: color-mix(in oklab, var(--primary) 20%, transparent);
+  color: #7265ff;
+}
+.home h1 {
+  margin: 14px 0px;
+  font-weight: 800;
+  font-size: 4rem; /* подберите размер по вкусу */
+  background: linear-gradient(90deg, #7265ff, #ff51a3);
+  -webkit-background-clip: text; /* для Safari и Chrome */
+  -webkit-text-fill-color: transparent; /* для Safari и Chrome */
+  background-clip: text; /* для остальных браузеров */
+  color: transparent;
+}
+.home p {
+  font-size: 1.25rem;
+  color: var(--muted-foreground);
+  margin-bottom: 18px;
+}
+.home button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2.1rem;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 0;
+  text-decoration: none;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+    margin-top: 16px;
+}
+.home button:hover {
+  transform: scale(108%);
+}
+
+.btn-pur {
+  background-color: var(--primary);
+  color: var(--text-color);
 }

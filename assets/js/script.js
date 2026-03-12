@@ -6,14 +6,44 @@ window.addEventListener("DOMContentLoaded", function () {
     document.querySelector("body").classList.toggle("dark");
   });
 
+
+
   // Navbar
   const nav = document.querySelector(".nav");
-
   window.addEventListener("scroll", function () {
     if (window.scrollY >= 1) {
       nav.classList.add("fix");
     } else {
       nav.classList.remove("fix");
+    }
+  });
+
+  
+
+  //   Navigator
+  const navWrapper = document.querySelector(".navigator"),
+    tabs = navWrapper.querySelectorAll("li a");
+
+  function activeTab(index = 0) {
+    tabs[index].classList.add("nav_active");
+  }
+
+  function hideTabs() {
+    tabs.forEach((item) => {
+      item.classList.remove("nav_active");
+    });
+  }
+
+  navWrapper.addEventListener("click", function (e) {
+    const target = e.target;
+
+    if (target && target.tagName === "A") {
+      tabs.forEach((item, index) => {
+        if (item === target) {
+          hideTabs();
+          activeTab(index);
+        }
+      });
     }
   });
 });
