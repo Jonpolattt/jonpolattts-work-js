@@ -6,8 +6,6 @@ window.addEventListener("DOMContentLoaded", function () {
     document.querySelector("body").classList.toggle("dark");
   });
 
-
-
   // Navbar
   const nav = document.querySelector(".nav");
   window.addEventListener("scroll", function () {
@@ -18,7 +16,16 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  
+  //   Up BUTTON
+  const upBtnWrapper = document.querySelector(".up-wrapper");
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY >= 100) {
+        upBtnWrapper.classList.add('show')
+    } else {
+        upBtnWrapper.classList.remove('show')
+    }
+  })
 
   //   Navigator
   const navWrapper = document.querySelector(".navigator"),

@@ -64,12 +64,14 @@
   --text-color: black;
   --bg-nav: rgba(255, 255, 255, 0.6);
   --border-color: rgba(183, 183, 183, 0.637);
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.167);
 }
 .dark {
   --bg-color: black;
   --text-color: white;
   --bg-nav: rgba(0, 0, 0, 0.6);
   --border-color: rgba(74, 74, 74, 0.514);
+  --box-shadow: 0 4px 20px rgba(40, 40, 40, 0.504);
 }
 
 body {
@@ -95,26 +97,51 @@ body {
   width: 1170px;
 }
 
+/* Up dtn */
+.up-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: right;
+  display: none;
+  transition: all 0.3s;
+}
+.up-button {
+  float: right;
+  border: none;
+  outline: none;
+  background-color: #7b84ff;
+  padding: 14px;
+  border-radius: 50%;
+  margin-top: 100px;
+  margin-right: 100px;
+  /* color: white; */
+  transition: all 0.3s;
+}
+.show {
+  display: block !important;
+  transition: all 0.3s;
+}
+
 /* HEADER */
 header {
   height: 100px;
 }
 nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   background-color: var(--bg-color);
   padding: 17px;
   background: var(--bg-nav);
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
-  transition: all 0.1s;
+  transition: all 0.5s;
 }
 .fix {
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  right: 0;
-  top: 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.167);
-  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  /* border-bottom: 1px solid var(--border-color); */
 }
 nav h2 {
   font-weight: 500;
@@ -212,7 +239,7 @@ ul li {
   transition:
     transform 0.18s ease,
     box-shadow 0.18s ease;
-    margin-top: 16px;
+  margin-top: 16px;
 }
 .home button:hover {
   transform: scale(108%);
