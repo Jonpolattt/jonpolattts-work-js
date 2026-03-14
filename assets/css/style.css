@@ -148,6 +148,7 @@ nav {
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   transition: all 0.5s;
+  z-index: 99999;
 }
 .fix {
   box-shadow: var(--box-shadow);
@@ -248,7 +249,7 @@ ul li {
 
 /* HEADER */
 
-/* Main */
+/* HOME */
 .home {
   display: flex;
   align-items: center;
@@ -264,10 +265,28 @@ ul li {
   border-color: color-mix(in oklab, var(--primary) 20%, transparent);
   color: #7265ff;
 }
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(120, 90, 255, 0.301),
+    rgba(255, 90, 200, 0.258)
+  );
+
+  filter: blur(120px);
+  z-index: -1;
+}
 .home h1 {
   margin: 14px 0px;
   font-weight: 800;
-  font-size: 4rem; /* подберите размер по вкусу */
+  font-size: 80px; /* подберите размер по вкусу */
   background: linear-gradient(90deg, #7265ff, #ff51a3);
   -webkit-background-clip: text; /* для Safari и Chrome */
   -webkit-text-fill-color: transparent; /* для Safari и Chrome */
@@ -282,7 +301,6 @@ ul li {
 .home button {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
   padding: 0.9rem 2.1rem;
   border-radius: 14px;
   font-weight: 700;
@@ -303,7 +321,10 @@ ul li {
   background-color: var(--primary);
   color: var(--btn-color);
 }
-
+.btn-pramiry {
+  background-color: var(--btn-bg-color);
+  color: var(--text-color);
+}
 /* ===================== */
 /* Large tablets */
 /* ===================== */
