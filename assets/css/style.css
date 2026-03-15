@@ -93,7 +93,20 @@ body {
     Segoe UI,
     sans-serif;
   background-color: var(--bg-color);
-  height: 400vh;
+}
+
+html,
+body {
+  overflow: auto; /* прокрутка разрешена */
+  height: 100%; /* нужно для корректной работы */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+/* Chrome, Safari, Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .d-flex {
@@ -538,8 +551,109 @@ ul li {
   height: 40px;
   border-radius: 50%;
 }
-
 /* /CORUSEL */
+
+/* COMPONENTS */
+.components {
+  padding: 80px;
+  text-align: center;
+  background-color: color-mix(in oklab, var(--color-pink-500) 10%, transparent);
+}
+.components h1 {
+  font-size: 49px;
+  color: var(--text-color);
+}
+.components p {
+  color: var(--muted-foreground);
+  font-size: 19px;
+  padding: 24px 0px;
+}
+.components button {
+  box-shadow: var(--card-box-shadow);
+  border: none;
+  outline: none;
+  padding: 18px 24px;
+  font-size: 19px;
+  border-radius: 15px;
+  background-color: #7b84ff;
+  transition: all 0.3s;
+  margin-top: 34px;
+}
+.components button a {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.components button:hover {
+  transform: scale(105%);
+}
+/* /COMPONENTS */
+
+/* FOOTER */
+footer {
+  margin-top: 50px;
+}
+.foot {
+  border: 1px solid var(--btn-bg-color);
+  padding: 24px;
+}
+.footer-titles {
+  width: 33%;
+}
+.footer-titles div {
+  display: flex;
+  align-items: center;
+}
+.footer-titles span {
+  color: white;
+  background-color: var(--color-purple-600);
+  padding: 4px 7px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.footer-titles h2 {
+  color: var(--text-color);
+}
+.footer-titles p {
+  padding-top: 16px;
+  color: oklch(56.241% 0.00006 271.152);
+}
+
+.footer-links {
+  margin-left: -80px;
+}
+.footer-links h2 {
+  color: var(--text-color);
+}
+.footer-links ul {
+  line-height: 28px;
+}
+.footer-links ul li a {
+  color: oklch(56.241% 0.00006 271.152);
+  transition: all 0.3s;
+}
+.footer-links ul li a:hover {
+  color: var(--primary);
+}
+
+.footer-connect h2 {
+  color: var(--text-color);
+}
+.footer-connect a {
+  background-color: var(--btn-bg-color);
+  color: var(--text-color);
+  border-radius: 10px;
+  margin: 8px;
+  padding: 5px;
+}
+.foo-bottom {
+  padding: 10px;
+  color: oklch(56.241% 0.00006 271.152);
+  text-align: center;
+}
 
 /* ===================== */
 /* Large tablets */
@@ -765,5 +879,3 @@ ul li {
     margin: 8px 4px;
   }
 }
-
-
