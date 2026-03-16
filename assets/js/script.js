@@ -6,6 +6,18 @@ window.addEventListener("DOMContentLoaded", function () {
     document.querySelector("body").classList.toggle("dark");
   });
 
+  //   Loader
+  const loader = document.querySelector(".loader-wrapper");
+  document.body.classList.add("loading");
+  setTimeout(() => {
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+      loader.style.display = "none";
+      document.body.classList.remove("loading");
+    }, 500);
+  }, 500);
+
   // Navbar
   const nav = document.querySelector(".nav");
   window.addEventListener("scroll", function () {
@@ -18,7 +30,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
   //   Up BUTTON
   const upBtn = document.querySelector(".up-wrapper");
-
   window.addEventListener("scroll", function () {
     if (window.scrollY >= 250) {
       upBtn.classList.add("show");
@@ -33,34 +44,7 @@ window.addEventListener("DOMContentLoaded", function () {
       behavior: "smooth",
     });
   });
-
-  //   Navigator
-  const navWrapper = document.querySelector(".navigator"),
-    tabs = navWrapper.querySelectorAll("li a");
-
-  function activeTab(index = 0) {
-    tabs[index].classList.add("nav_active");
-  }
-
-  function hideTabs() {
-    tabs.forEach((item) => {
-      item.classList.remove("nav_active");
-    });
-  }
-
-  navWrapper.addEventListener("click", function (e) {
-    const target = e.target;
-
-    if (target && target.tagName === "A") {
-      tabs.forEach((item, index) => {
-        if (item === target) {
-          hideTabs();
-          activeTab(index);
-        }
-      });
-    }
-  });
-
+  
   //   BURGER
   const burger = document.querySelector(".nav-menu"),
     burgerBtn = document.querySelector(".burger-btn");
