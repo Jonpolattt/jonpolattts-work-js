@@ -9,6 +9,8 @@
   --features-bg-color: rgba(231, 231, 231, 0.345);
   --card-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.103);
   --secondary: oklch(95% 0.0058 264.53);
+  --color: oklch(56.926% 0.00006 271.152);
+  --card: white;
 }
 .show {
   display: block;
@@ -30,7 +32,7 @@
   color: transparent;
 }
 .components-titless p {
-  color: oklch(56.926% 0.00006 271.152);
+  color: var(--color);
   font-size: 17px;
 }
 
@@ -51,16 +53,67 @@
   align-items: center;
 }
 .tabheader__item {
-  /* margin: 0px 30px; */
   padding: 15px;
   border-radius: 10px;
-  cursor: default;
+  padding: 10px 34px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
-.tabheader__item p {
-  padding: 0px 10px;
-}
-
 .tabheader__item_active {
   background-color: #6366f1;
   color: white !important;
+}
+
+/* Tab main */
+.tab-main {
+  margin-top: 24px;
+}
+.tab_content {
+  padding: 24px;
+  border: 1px solid var(--btn-bg-color);
+  border-radius: 15px;
+  color: var(--color);
+  line-height: 34px;
+  font-size: 18px;
+  background-color: var(--card);
+  transition: all 0.3s;
+}
+
+/* my projects */
+.box {
+  border: 1px solid var(--btn-bg-color);
+  border-radius: 15px;
+  padding: 8px;
+  width: 40%;
+  margin: 18px;
+}
+.box-img img {
+  width: 100%;
+  border-radius: 15px;
+}
+.box-content {
+  padding: 10px;
+}
+.box-content h3 {
+  color: var(--text-color);
+}
+.box-content .d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.box-content button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 2.1rem;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 0;
+  text-decoration: none;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+  margin: 16px 14px 16px 0px;
 }

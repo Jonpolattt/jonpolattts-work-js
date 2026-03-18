@@ -9,7 +9,6 @@
 :root {
   --background: #0a0a0f;
   --foreground: oklch(98.5% 0 0);
-  --card: #131318;
   --card-foreground: oklch(98.5% 0 0);
   --popover: oklch(14.5% 0 0);
   --popover-foreground: oklch(98.5% 0 0);
@@ -69,6 +68,7 @@
   --btn-bg-color: oklch(95% 0.0058 264.53);
   --features-bg-color: rgba(231, 231, 231, 0.345);
   --card-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.103);
+  --card: white;
 }
 .dark {
   --bg-color: black;
@@ -79,17 +79,11 @@
   --btn-bg-color: var(--secondary);
   --features-bg-color: color-mix(in oklab, var(--secondary) 30%, transparent);
   --secondary: oklch(26.9% 0 0);
-}
-.show {
-  display: block;
-}
-.hide {
-  display: none;
+  --card: #131318;
 }
 .darkMode-btn {
   background-color: var(--btn-bg-color) !important;
 }
-
 body {
   /* background-color: var(--background); */
   font-family:
@@ -371,7 +365,7 @@ ul li {
 }
 
 .btn-pur {
-  background-color: var(--primary);
+  background-color: #6366f1;
   color: var(--btn-color);
 }
 .btn-pramiry {
@@ -630,10 +624,11 @@ ul li {
 /* FOOTER */
 footer {
   margin-top: 50px;
+  background-color: var(--card);
+  border-top: 1px solid var(--btn-bg-color);
 }
 .foot {
-  border: 1px solid var(--btn-bg-color);
-  padding: 24px;
+  padding: 36px;
 }
 .footer-titles {
   width: 33%;
@@ -689,9 +684,25 @@ footer {
   display: inline-block !important;
 }
 .foo-bottom {
-  padding: 10px;
-  color: oklch(56.241% 0.00006 271.152);
   text-align: center;
+  padding: 34px;
+  color: oklch(56.241% 0.00006 271.152);
+}
+.broder {
+  border-bottom: 1px solid var(--btn-bg-color);
+  padding-bottom: 50px;
+}
+.broder .d-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
 }
 
 /* ===================== */
