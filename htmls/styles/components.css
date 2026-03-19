@@ -187,7 +187,8 @@
   color: var(--text-color);
   margin-bottom: 24px;
 }
-#modal button {
+.btns button,
+.modal-btn {
   padding: 0.9rem 2.1rem;
   border-radius: 14px;
   font-weight: 700;
@@ -203,7 +204,12 @@
 }
 .modal-close {
   margin: 0px;
-  padding: 10px !important;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: var(--btn-bg-color);
+  color: var(--text-color);
   border-radius: 5px;
 }
 #modal button:hover {
@@ -227,7 +233,7 @@
   display: flex;
 }
 .modal {
-  width: 40%;
+  width: 50%;
   background-color: var(--card);
   border-radius: 20px;
   padding: 18px;
@@ -244,6 +250,9 @@
 }
 .modal p {
   color: var(--color);
+}
+.btns button {
+  width: 40%;
 }
 
 /* RESPONSIVE */
@@ -288,6 +297,22 @@
   .box-wrapper .d-flex {
     display: flex;
     flex-direction: column;
+  }
+  /* modal */
+  .modal {
+    width: 80%;
+  }
+  .btns .d-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    float: left;
+  }
+  .btns {
+    width: 100%;
+  }
+  .btns button {
+    width: 100%;
   }
 }
 

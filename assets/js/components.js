@@ -32,7 +32,6 @@ window.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-    console.log(event.target);
   });
 
   hideTabContent();
@@ -61,19 +60,21 @@ window.addEventListener("DOMContentLoaded", function () {
   function openModal() {
     modal.classList.add("flex");
     modal.classList.remove("hide");
+    document.querySelector("body").style.overflowY = 'hidden'
   }
 
   function closeModal() {
     modal.classList.add("hide");
     modal.classList.remove("flex");
+    document.querySelector("body").style.overflowY = "scroll";
   }
 
-  openModalBtn.addEventListener("click", function (e) {
+  openModalBtn.addEventListener("click", function () {
     openModal();
   });
 
-  closeModalBtns.forEach((item, index) => {
-    item.addEventListener("click", function (e) {
+  closeModalBtns.forEach((item) => {
+    item.addEventListener("click", function () {
       closeModal();
     });
   });
