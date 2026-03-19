@@ -227,6 +227,7 @@ nav span {
 .nav_active {
   color: var(--color-purple-600) !important;
   border-bottom: 2px solid var(--color-purple-600) !important;
+  padding-bottom: 5px;
 }
 
 nav h1,

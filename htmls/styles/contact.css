@@ -14,6 +14,8 @@
   --card: white;
   --input-background: #f3f3f5;
   --placeholder-color: rgb(91, 91, 91);
+  --muted-foreground: oklch(70.8% 0 0);
+  --color-pink-500: oklch(65.613% 0.24084 353.961 / 0.366);
 }
 
 #contact-us {
@@ -36,6 +38,9 @@
   font-size: 17px;
 }
 .cards {
+  display: flex;
+  align-items: top;
+
   margin-top: 50px;
 }
 .contact {
@@ -106,4 +111,90 @@ textarea:focus-visible {
 }
 .submit-btn:hover {
   transform: scale(102%);
+}
+.error-massage {
+  color: rgb(197, 0, 0);
+  display: none;
+}
+
+.about_us {
+  border: 1px solid var(--btn-bg-color);
+  padding: 24px;
+  box-shadow: var(--card-box-shadow);
+  width: 50%;
+  border-radius: 15px;
+  color: var(--text-color);
+  background-color: color-mix(in oklab, var(--color-pink-500) 10%, transparent);
+}
+.about_us p {
+  color: var(--muted-foreground);
+  padding: 10px 0px;
+  font-size: 18px;
+}
+.my-information a {
+  color: var(--text-color);
+}
+.my-information .d-flex {
+  display: flex;
+  justify-content: start;
+  align-items: top;
+  margin-top: 10px;
+}
+.bg-svg {
+  background-color: color-mix(in oklab, var(--primary) 10%, transparent);
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.info-card {
+  padding-top: 22px;
+}
+.info-text {
+  line-height: 14px;
+}
+.my-information a:hover {
+}
+
+.workdays {
+  margin-top: 24px;
+  color: var(--text-color);
+  border-top: 1px solid var(--btn-bg-color);
+  padding-top: 14px;
+}
+.times .d-flex {
+  justify-content: space-between;
+}
+.times p {
+  padding-top: 12px;
+}
+.times span {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 39px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+  }
+
+  .contact,
+  .about_us {
+    width: 100%;
+  }
+  .about_us {
+    margin-top: 50px;
+  }
 }
