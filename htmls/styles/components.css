@@ -2,7 +2,7 @@
   --bg-color: white;
   --text-color: black;
   --bg-nav: rgba(255, 255, 255, 0.6);
-  --border-color: rgba(183, 183, 183, 0.637);
+  /* --border-color: rgba(183, 183, 183, 0.637); */
   --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.167);
   --btn-color: white;
   --btn-bg-color: oklch(95% 0.0058 264.53);
@@ -10,6 +10,7 @@
   --card-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.103);
   --secondary: oklch(95% 0.0058 264.53);
   --color: oklch(56.926% 0.00006 271.152);
+  --border-color: oklch(71.871% 0.00008 271.152);
   --card: white;
 }
 .show {
@@ -254,6 +255,7 @@
 .btns button {
   width: 40%;
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 1200px) {

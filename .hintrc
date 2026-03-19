@@ -17,6 +17,12 @@
           "border-color: color-mix(in oklab, var(--primary) 50%, transparent)"
         ]
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
     ]
   },
   "browserslist": [

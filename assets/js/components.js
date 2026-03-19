@@ -60,7 +60,7 @@ window.addEventListener("DOMContentLoaded", function () {
   function openModal() {
     modal.classList.add("flex");
     modal.classList.remove("hide");
-    document.querySelector("body").style.overflowY = 'hidden'
+    document.querySelector("body").style.overflowY = "hidden";
   }
 
   function closeModal() {
