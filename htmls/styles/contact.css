@@ -1,0 +1,42 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --bg-nav: rgba(255, 255, 255, 0.6);
+  /* --border-color: rgba(183, 183, 183, 0.637); */
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.167);
+  --btn-color: white;
+  --btn-bg-color: oklch(95% 0.0058 264.53);
+  --features-bg-color: rgba(231, 231, 231, 0.345);
+  --card-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.103);
+  --secondary: oklch(95% 0.0058 264.53);
+  --color: oklch(56.926% 0.00006 271.152);
+  --border-color: oklch(71.871% 0.00008 271.152);
+  --card: white;
+}
+
+#contact-us {
+  margin-top: 50px;
+}
+.title {
+  text-align: center;
+}
+.title h1 {
+  font-weight: 800;
+  font-size: 69px;
+  background: linear-gradient(90deg, #7265ff, #ff51a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.title p {
+  color: var(--color);
+  font-size: 17px;
+}
+
+
+.contact {
+    border: 1px solid var(--btn-bg-color);
+    padding: 24px;
+    box-shadow: var(--card-box-shadow);
+}

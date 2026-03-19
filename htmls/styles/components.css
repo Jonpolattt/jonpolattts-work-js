@@ -79,6 +79,7 @@
   font-size: 18px;
   background-color: var(--card);
   transition: all 0.3s;
+  box-shadow: var(--card-box-shadow);
 }
 
 /* my projects */
